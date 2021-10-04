@@ -36,8 +36,8 @@ QCMR <- function(data) {
   result <- bootstrap(1:nrow(d),nboot=100,theta=f,d)
   se1 <- sd(result$thetastar[1,])
   se2 <- sd(result$thetastar[2,])
-  p1 <- (1-pnorm(abs(beta1hat[i]/se1[i])))*2
-  p2 <- (1-pnorm(abs(beta2hat[i]/se2[i])))*2
+  p1 <- (1-pnorm(abs(beta1hat/se1)))*2
+  p2 <- (1-pnorm(abs(beta2hat/se2)))*2
 
   res <- cbind(beta1hat,se1,p1,beta2hat,se2,p2)
   return(res)
