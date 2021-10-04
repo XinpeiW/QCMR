@@ -20,7 +20,7 @@ QCMR <- function(data) {
   obj2 <- summary(lm(Y~Z+I(Z^2)))$coefficients
   ahat <- obj1[2,1]
   beta2hat <- obj2[3,1]/ahat^2
-  beta1hat <- (obj2[2,1]-2*ahat*beta2hat[i]*obj1[1,1])/ahat
+  beta1hat <- (obj2[2,1]-2*ahat*beta2hat*obj1[1,1])/ahat
 
   # se calculation
   d <- data.frame(cbind(Z,X,Y))
