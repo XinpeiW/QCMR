@@ -1,0 +1,11 @@
+Package: QCMR
+Type: Package
+Title: Quadratic MR analysis
+Version: 0.1.0
+Author: Xinpei Wang
+Maintainer: Xinpei Wang <w-xp@pku.edu.cn>
+Description: This package is used to identify and estimate the quadratic causality of exposure on outcome.
+License: 
+Encoding: UTF-8
+LazyData: true
+
